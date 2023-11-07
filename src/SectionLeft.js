@@ -1,5 +1,5 @@
-import {  Container, Flex, Heading, Icon, Image, SimpleGrid, Stack, StackDivider, Text, useColorModeValue } from '@chakra-ui/react'
-import { IoAlarmSharp, IoAccessibilitySharp,IoShuffleSharp } from 'react-icons/io5'
+import { Container, Flex, Heading, Icon, Image, SimpleGrid, Stack, StackDivider, Text, useColorModeValue } from '@chakra-ui/react'
+import { IoAlarmSharp, IoAccessibilitySharp, IoShuffleSharp } from 'react-icons/io5'
 import React from 'react'
 
 const Feature = ({ text, icon, iconBg }) => {
@@ -13,10 +13,20 @@ const Feature = ({ text, icon, iconBg }) => {
     )
 }
 
-export default function Section1() {
+export default function SectionLeft({ h, t, i, n, ...props }) {
     return (
         <Container maxW={'5xl'} py={12}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+                <Flex>
+                    <Image
+                        rounded={'md'}
+                        alt={'feature image'}
+                        src={
+                            i
+                        }
+                        objectFit={'cover'}
+                    />
+                </Flex>
                 <Stack spacing={4}>
                     <Text
                         textTransform={'uppercase'}
@@ -27,13 +37,13 @@ export default function Section1() {
                         p={2}
                         alignSelf={'flex-start'}
                         rounded={'md'}>
-                        Our Story
+                        {n}
                     </Text>
-                    <Heading>Ручное управление базами: Потеря времени и потенциала</Heading>
+                    <Heading>{h}</Heading>
                     <Text color={'gray.500'} fontSize={'lg'}>
-                    Сложное и трудоемкое ручное управление базами данных часто приводит к нерегулярности и беспорядку в списках баз данных. Этот хаос в управлении требует значительных временных и человеческих ресурсов, что делает задачу управления базами еще более тяжелой.
+                        {t}
                     </Text>
-                    <Stack
+                    {/* <Stack
                         spacing={4}
                         divider={
                             <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
@@ -53,18 +63,9 @@ export default function Section1() {
                             iconBg={useColorModeValue('yellow.100', 'yellow.900')}
                             text={'Затраты времени и ресурсов'}
                         />
-                    </Stack>
+                    </Stack> */}
                 </Stack>
-                <Flex>
-                    <Image
-                        rounded={'md'}
-                        alt={'feature image'}
-                        src={
-                            'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-                        }
-                        objectFit={'cover'}
-                    />
-                </Flex>
+
             </SimpleGrid>
         </Container>
     )
