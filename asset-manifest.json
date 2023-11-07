@@ -1,16 +1,10 @@
 {
   "files": {
-    "main.css": "/listservice-promo/static/css/main.f855e6bc.css",
-    "main.js": "/listservice-promo/static/js/main.28fa730c.js",
-    "static/js/787.00cc9f12.chunk.js": "/listservice-promo/static/js/787.00cc9f12.chunk.js",
-    "static/media/logo.svg": "/listservice-promo/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.js": "/listservice-promo/static/js/main.7e1d6a22.js",
     "index.html": "/listservice-promo/index.html",
-    "main.f855e6bc.css.map": "/listservice-promo/static/css/main.f855e6bc.css.map",
-    "main.28fa730c.js.map": "/listservice-promo/static/js/main.28fa730c.js.map",
-    "787.00cc9f12.chunk.js.map": "/listservice-promo/static/js/787.00cc9f12.chunk.js.map"
+    "main.7e1d6a22.js.map": "/listservice-promo/static/js/main.7e1d6a22.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.28fa730c.js"
+    "static/js/main.7e1d6a22.js"
   ]
 }
