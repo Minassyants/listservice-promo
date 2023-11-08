@@ -15,9 +15,9 @@ const Feature = ({ text, icon, iconBg }) => {
 
 export default function SectionLeft({ h, t, i, n, ...props }) {
     return (
-        <Container maxW={'5xl'} py={12}>
+        <Container maxW={'5xl'} py={12} minH={"50vh"}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-                <Flex>
+                <Flex order={{base:1,md:-1}}>
                     <Image
                         rounded={'md'}
                         alt={'feature image'}
