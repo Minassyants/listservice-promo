@@ -46,9 +46,9 @@ export default function Hero() {
             Узнать больше...
           </Button>
         </Stack>
-       
+        
       </Stack>
-      <InfoBaseList/>
+      <InfoBaseList q={8}/>
       <Divider />
     </Container>
     
