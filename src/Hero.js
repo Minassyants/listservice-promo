@@ -1,15 +1,13 @@
 import React from 'react'
 import {
-  Flex,
   Container,
   Heading,
   Stack,
   Text,
   Button,
-  Icon,
   Divider,
 } from '@chakra-ui/react'
-import InfoBaseList from './InfoBaseList'
+import InfoBaseSend from './InfoBaseSend'
 
 
 
@@ -48,7 +46,7 @@ export default function Hero() {
         </Stack>
         
       </Stack>
-      <InfoBaseList q={8}/>
+      <InfoBaseSend/>
       <Divider />
     </Container>
     
