@@ -15,7 +15,7 @@ export default function App() {
                 <Hero />
             </Box>
             <SectionRight n='№1' h={S1H1} t={S1T1}>
-                <Stack alignItems={'flex-start'}>
+                <Stack spacing={14} alignItems={'flex-start'}>
                 <InfoBaseList delay={'0'}>
                 1. Бухгалтерия предприятия Srvr="192.168.0.10" Ref="BUH_1C"
                 </InfoBaseList>
@@ -23,7 +23,10 @@ export default function App() {
                 2. ЗУП Srvr="192.168.0.16" Ref="ZUP_1C"
                 </InfoBaseList>
                 <InfoBaseList delay={'7'}>
-                3. Розница 3.0 Srvr="192.168.0.17" Ref="Magazin_1C"
+                3. Розница 3.0 Srvr="192.168.0.17" Ref="Roznica_1C"
+                </InfoBaseList>
+                <InfoBaseList delay={'10.5'}>
+                4. Управление торговлей Srvr="192.168.0.19" Ref="UT_WORK"
                 </InfoBaseList>
                 </Stack>
             </SectionRight>
