@@ -32,7 +32,7 @@ export default function InfoBaseSend() {
     return (
         <Box sx={{ containerType: "inline-size" }} rounded={'md'}>
             <Icon
-                boxSize={"5cqw"}
+                boxSize={"7cqw"}
                 as={IoFolderOpenOutline}
                 animation={flyAnimation}
                 position={'relative'} top={'-15cqw'} left={'15cqw'}

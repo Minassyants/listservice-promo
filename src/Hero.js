@@ -13,7 +13,7 @@ import InfoBaseSend from './InfoBaseSend'
 
 export default function Hero() {
   return (
-    <Container maxW={'5xl'} h="100%" >
+    <Container maxW={'5xl'} h="100%">
       <Stack
         textAlign={'center'}
         align={'center'}

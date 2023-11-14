@@ -13,7 +13,7 @@ const Feature = ({ text, icon, iconBg }) => {
     )
 }
 
-export default function SectionRight({children, h,t,i, n, ...props}) {
+export default function SectionRight({children, h,t,n, ...props}) {
     return (
         <Container maxW={'5xl'} py={12} minH={"50vh"}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>

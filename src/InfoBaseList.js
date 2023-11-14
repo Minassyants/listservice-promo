@@ -34,7 +34,7 @@ export default function InfoBaseList({children, delay, ...props}) {
 
     return (<Box>
         <Text
-        fontSize={'lg'}
+        fontSize={'[md,lg]'}
         color={useColorModeValue('orange.400','orange.500')}
         ref={ref}
         width={0}
