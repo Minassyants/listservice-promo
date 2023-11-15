@@ -39,7 +39,7 @@ export default function UserGroups() {
             <CardHeader >
                 <Stack direction={'row'} alignItems={'center'}>
                     <Icon as={IoFolderOpenOutline} boxSize={"2.25rem"} color={'black.500'} />
-                    <Heading >Отдел бухгалтерии</Heading>
+                    <Heading >Отдел продаж</Heading>
                 </Stack>
             </CardHeader>
             <CardBody>

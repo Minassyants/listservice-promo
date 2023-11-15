@@ -12,7 +12,7 @@ export default function InfoBaseList() {
                 </Stack>
             </CardHeader>
             <CardBody>
-                <Card bg={useColorModeValue('gray.200', 'gray.800')}>
+                <Card bg={useColorModeValue('gray.200', 'gray.800')} pr={4}>
                     <CardBody>
                         <Stack spacing={4}
                             divider={
@@ -20,16 +20,16 @@ export default function InfoBaseList() {
                             }
                             alignItems={'flex-start'} color={useColorModeValue('orange.400', 'orange.500')}>
                             <InfoBaseItem delay={'0'}>
-                                1. Srvr="192.168.0.17" Ref="Roznica_1C"
+                                1.Srvr="192.168.0.2" Ref="Roznica_1C"
                             </InfoBaseItem>
                             <InfoBaseItem delay={'3.5'}>
-                                2. Srvr="192.168.0.10" Ref="BUH_1C"
+                                2.Srvr="192.168.0.10" Ref="BUH_1C"
                             </InfoBaseItem>
                             <InfoBaseItem delay={'7'}>
-                                3. Srvr="192.168.0.19" Ref="UT_WORK"
+                                3.Srvr="192.168.0.19" Ref="UT_1C"
                             </InfoBaseItem>
                             <InfoBaseItem delay={'10.5'}>
-                                4. Srvr="192.168.0.16" Ref="ZUP_1C"
+                                4.Srvr="192.168.0.16" Ref="ZUP_1C"
                             </InfoBaseItem>
                         </Stack>
                     </CardBody>
