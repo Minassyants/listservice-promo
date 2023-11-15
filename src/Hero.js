@@ -11,7 +11,7 @@ import InfoBaseSend from './InfoBaseSend'
 
 
 
-export default function Hero() {
+export default function Hero({moreOnClick, ...props}) {
   return (
     <Container maxW={'5xl'} h="100%">
       <Stack
@@ -40,7 +40,7 @@ export default function Hero() {
             _hover={{ bg: 'orange.500' }}>
             Начать!
           </Button>
-          <Button rounded={'full'} px={6}>
+          <Button rounded={'full'} px={6} onClick={moreOnClick}>
             Узнать больше...
           </Button>
         </Stack>

@@ -1,45 +1,44 @@
+// @ts-nocheck
 import React, { useRef } from 'react'
 import Nav from './Nav'
 import SectionRight from './SectionRight'
 import { S1H1, S1T1, S2H1, S2T1, S3H1, S3T1 } from './Content'
 import SectionLeft from './SectionLeft'
 import Hero from './Hero'
-import { Box, Stack } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
+
+import UserGroups from './UserGroups'
 import InfoBaseList from './InfoBaseList'
+import InfoBaseGroup from './InfoBaseGroup'
+
+
+
 
 export default function App() {
     const aboutRef = useRef(null);
 
     const handleClick = () => {
-        aboutRef.current?.scrollIntoView({behavior: 'smooth'});
-      };
+        // @ts-ignore
+        aboutRef.current?.scrollIntoView({ behavior: 'auto' });
+    };
 
     return (
         <>
             <Box h={"100vh"}>
                 <Nav />
-                <Hero />
+                <Hero moreOnClick={handleClick} />
             </Box>
-            <SectionRight n='№1' h={S1H1} t={S1T1} ref={aboutRef}>
-                <Stack spacing={14} alignItems={'flex-start'}>
-                <InfoBaseList delay={'0'}>
-                1. Бухгалтерия предприятия Srvr="192.168.0.10" Ref="BUH_1C"
-                </InfoBaseList>
-                <InfoBaseList delay={'3.5'}>
-                2. Управление торговлей Srvr="192.168.0.19" Ref="UT_WORK"
-                </InfoBaseList>
-                <InfoBaseList delay={'7'}>
-                3. Розница 3.0 Srvr="192.168.0.17" Ref="Roznica_1C"
-                </InfoBaseList>
-                <InfoBaseList delay={'10.5'}>
-                4. ЗУП Srvr="192.168.0.16" Ref="ZUP_1C"
-                </InfoBaseList>
-                </Stack>
+            <SectionRight h={S1H1} t={S1T1} ref={aboutRef}>
+                <InfoBaseList />
             </SectionRight>
 
-            <SectionLeft n='№2' h={S2H1} t={S2T1} i='https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80' />
+            <SectionLeft h={S2H1} t={S2T1}>
+                <UserGroups />
+            </SectionLeft>
 
-            <SectionRight n='№3' h={S3H1} t={S3T1}/>
+            <SectionRight h={S3H1} t={S3T1}>
+                <InfoBaseGroup />
+            </SectionRight>
         </>
     )
 }

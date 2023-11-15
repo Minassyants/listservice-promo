@@ -1,24 +1,19 @@
-import {  Container, Flex, Heading, Icon, Image, SimpleGrid, Stack, StackDivider, Text, useColorModeValue } from '@chakra-ui/react'
-import { IoAlarmSharp, IoAccessibilitySharp,IoShuffleSharp } from 'react-icons/io5'
-import React from 'react'
+// @ts-ignore
+import { Container, Flex, Heading, SimpleGrid, Stack, Text } from '@chakra-ui/react'
+// @ts-ignore
+import React, { forwardRef } from 'react'
 
-const Feature = ({ text, icon, iconBg }) => {
-    return (
-        <Stack direction={'row'} align={'center'}>
-            <Flex w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
-                {icon}
-            </Flex>
-            <Text fontWeight={600}>{text}</Text>
-        </Stack>
-    )
-}
 
-export default function SectionRight({children, h,t,n, ...props}) {
+
+// @ts-ignore
+export default forwardRef(function SectionRight(props, ref) {
+    // @ts-ignore
+    const { children, h, t,} = props
     return (
-        <Container maxW={'5xl'} py={12} minH={"50vh"}>
+        <Container maxW={'5xl'} py={12} minH={"50vh"} ref={ref}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 <Stack spacing={4}>
-                    <Text
+                    {/* <Text
                         textTransform={'uppercase'}
                         color={'blue.400'}
                         fontWeight={600}
@@ -28,10 +23,10 @@ export default function SectionRight({children, h,t,n, ...props}) {
                         alignSelf={'flex-start'}
                         rounded={'md'}>
                         {n}
-                    </Text>
+                    </Text> */}
                     <Heading>{h}</Heading>
                     <Text color={'gray.500'} fontSize={'lg'}>
-                    {t}
+                        {t}
                     </Text>
                     {/* <Stack
                         spacing={4}
@@ -62,3 +57,4 @@ export default function SectionRight({children, h,t,n, ...props}) {
         </Container>
     )
 }
+)

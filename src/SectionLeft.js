@@ -1,34 +1,15 @@
-import { Container, Flex, Heading, Icon, Image, SimpleGrid, Stack, StackDivider, Text, useColorModeValue } from '@chakra-ui/react'
-import { IoAlarmSharp, IoAccessibilitySharp, IoShuffleSharp } from 'react-icons/io5'
+import { Container, Flex, Heading, SimpleGrid, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const Feature = ({ text, icon, iconBg }) => {
-    return (
-        <Stack direction={'row'} align={'center'}>
-            <Flex w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
-                {icon}
-            </Flex>
-            <Text fontWeight={600}>{text}</Text>
-        </Stack>
-    )
-}
-
-export default function SectionLeft({ h, t, i, n, ...props }) {
+export default function SectionLeft({ children, h, t,  ...props }) {
     return (
         <Container maxW={'5xl'} py={12} minH={"50vh"}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                 <Flex order={{base:1,md:-1}}>
-                    <Image
-                        rounded={'md'}
-                        alt={'feature image'}
-                        src={
-                            i
-                        }
-                        objectFit={'cover'}
-                    />
+                    {children}
                 </Flex>
                 <Stack spacing={4}>
-                    <Text
+                    {/* <Text
                         textTransform={'uppercase'}
                         color={'blue.400'}
                         fontWeight={600}
@@ -38,7 +19,7 @@ export default function SectionLeft({ h, t, i, n, ...props }) {
                         alignSelf={'flex-start'}
                         rounded={'md'}>
                         {n}
-                    </Text>
+                    </Text> */}
                     <Heading>{h}</Heading>
                     <Text color={'gray.500'} fontSize={'lg'}>
                         {t}

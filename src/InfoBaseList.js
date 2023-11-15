@@ -1,52 +1,40 @@
-import { Box,  Text, useColorModeValue } from '@chakra-ui/react'
-import { keyframes } from '@emotion/react'
-import React, { useEffect, useState } from 'react'
-import { useInView } from 'react-intersection-observer'
+import { Card, CardBody, CardHeader, Heading, Icon, Stack, StackDivider, useColorModeValue } from '@chakra-ui/react'
+import React from 'react'
+import { IoList } from 'react-icons/io5'
+import InfoBaseItem from './InfoBaseItem'
 
-
-const blink = keyframes`
-0% { border-color: transparent }
-50% { border-color: orange; }
-100% { border-color: transparent }
-`
-
-const typing = keyframes`
-from { width: 0; opacity:100}
-to { width: 100%; opacity:100}
-`
-
-
-export default function InfoBaseList({children, delay, ...props}) {
-
-    const [animate, setAnimate] = useState('')
-    const [ref,inView] = useInView()
-
-    useEffect(() =>
-    {
-        if (inView) {
-            setAnimate(`
-            ${typing} 3.5s ${delay}s steps(40, end) forwards,
-            ${blink} .75s ${delay}s step-end 5 forwards
-            `)
-        }
-        
-    },[delay,inView])
-
-    return (<Box>
-        <Text
-        fontSize={'[md,lg]'}
-        color={useColorModeValue('orange.400','orange.500')}
-        ref={ref}
-        width={0}
-        opacity={0}
-        overflow={'hidden'}
-        borderRight={'.15em solid orange'}
-        whiteSpace={'nowrap'}
-        m={'0 auto'}
-        animation={animate}>
-            {children}
-        </Text>
-    </Box>
-
+export default function InfoBaseList() {
+    return (
+        <Card color={useColorModeValue('orange.400', 'orange.500')} boxShadow='lg'>
+            <CardHeader>
+                <Stack direction={'row'} alignItems={'center'}>
+                    <Icon as={IoList} boxSize={"2vw"} color={'black.500'} /><Heading >  Рабочие базы </Heading>
+                </Stack>
+            </CardHeader>
+            <CardBody>
+                <Card bg={useColorModeValue('gray.200', 'gray.800')}>
+                    <CardBody>
+                        <Stack spacing={4}
+                            divider={
+                                <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
+                            }
+                            alignItems={'flex-start'} color={useColorModeValue('orange.400', 'orange.500')}>
+                            <InfoBaseItem delay={'0'}>
+                                1. Розница 3.0 - Srvr="192.168.0.17" Ref="Roznica_1C"
+                            </InfoBaseItem>
+                            <InfoBaseItem delay={'3.5'}>
+                                2. Бухгалтерия - Srvr="192.168.0.10" Ref="BUH_1C"
+                            </InfoBaseItem>
+                            <InfoBaseItem delay={'7'}>
+                                3. УТ - Srvr="192.168.0.19" Ref="UT_WORK"
+                            </InfoBaseItem>
+                            <InfoBaseItem delay={'10.5'}>
+                                4. ЗУП - Srvr="192.168.0.16" Ref="ZUP_1C"
+                            </InfoBaseItem>
+                        </Stack>
+                    </CardBody>
+                </Card>
+            </CardBody>
+        </Card>
     )
 }
