@@ -34,7 +34,7 @@ export default function InfoBaseItem({ children, delay, ...props }) {
     return (<Box>
         <Text
             fontWeight={600}
-            fontSize={'[md,lg]'}
+            fontSize={'[null,sm,sm,sm,lg]'}
             
             ref={ref}
             width={0}

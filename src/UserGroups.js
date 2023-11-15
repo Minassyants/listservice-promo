@@ -38,7 +38,7 @@ export default function UserGroups() {
         <Card color={useColorModeValue('orange.400', 'orange.500')} boxShadow='lg'>
             <CardHeader >
                 <Stack direction={'row'} alignItems={'center'}>
-                    <Icon as={IoFolderOpenOutline} boxSize={"2vw"} color={'black.500'} />
+                    <Icon as={IoFolderOpenOutline} boxSize={"2.25rem"} color={'black.500'} />
                     <Heading >Отдел бухгалтерии</Heading>
                 </Stack>
             </CardHeader>

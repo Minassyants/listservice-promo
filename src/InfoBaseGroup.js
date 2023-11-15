@@ -29,7 +29,7 @@ export default function InfoBaseGroup() {
         <Card color={useColorModeValue('orange.400', 'orange.500')} boxShadow='lg'>
             <CardHeader>
                 <Stack direction={'row'} alignItems={'center'}>
-                    <Icon as={IoList} boxSize={"2vw"} color={'black.500'} /><Heading >  Рабочие базы </Heading>
+                    <Icon as={IoList} boxSize={"2.25rem"} color={'black.500'} /><Heading >  Рабочие базы </Heading>
                 </Stack>
             </CardHeader>
             <CardBody>
