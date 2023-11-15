@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/listservice-promo/static/js/main.ddca21f7.js",
+    "main.js": "/listservice-promo/static/js/main.9bc9aab7.js",
     "index.html": "/listservice-promo/index.html",
-    "main.ddca21f7.js.map": "/listservice-promo/static/js/main.ddca21f7.js.map"
+    "main.9bc9aab7.js.map": "/listservice-promo/static/js/main.9bc9aab7.js.map"
   },
   "entrypoints": [
-    "static/js/main.ddca21f7.js"
+    "static/js/main.9bc9aab7.js"
   ]
 }
